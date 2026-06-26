@@ -1,0 +1,47 @@
+/* Toast — transient notification. Tokens only. Contract: toast.md · node 2468:12. */
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-base);
+  background: var(--color-semantic-surface-elevated);
+  border-radius: var(--radius-md);
+  border: var(--border-width-subtle) solid var(--color-semantic-divider-default);
+  border-left: var(--border-width-strong) solid currentColor;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size-m);
+  height: var(--icon-size-m);
+  flex-shrink: 0;
+}
+
+.text {
+  flex: 1;
+  font-family: var(--type-body-m-strong-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-strong-size);
+  font-weight: var(--type-body-m-strong-weight);
+  line-height: var(--type-body-m-strong-line-height);
+  color: var(--color-semantic-text-primary);
+}
+
+.action {
+  flex-shrink: 0;
+  padding: 0 var(--spacing-sm-plus);
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--color-semantic-text-link);
+  font-family: var(--type-button-s-family), system-ui, sans-serif;
+  font-size: var(--type-button-s-size);
+  font-weight: var(--type-button-s-weight);
+  line-height: var(--type-button-s-line-height);
+}
+
+/* accent (currentColor → left border) per color */
+.success { color: var(--color-semantic-status-success-default); }
+.error { color: var(--color-semantic-status-error-default); }
