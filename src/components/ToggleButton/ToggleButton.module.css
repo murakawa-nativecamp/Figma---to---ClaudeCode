@@ -1,0 +1,58 @@
+/* ToggleButton — chip-shaped toggle. Token-bound only. Figma 983:224. */
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 0;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: var(--radius-full);
+  font-family: var(--type-button-l-family), system-ui, sans-serif;
+}
+.toggle:disabled { cursor: not-allowed; }
+
+.icon { display: inline-flex; align-items: center; justify-content: center; }
+
+/* ---- size: height + padding-x + gap + typography ---- */
+.l {
+  height: var(--control-height-m);
+  padding: 0 var(--spacing-base);
+  gap: var(--spacing-sm);
+  font-size: var(--type-button-l-size);
+  font-weight: var(--type-button-l-weight);
+  line-height: var(--type-button-l-line-height);
+}
+.m {
+  height: var(--control-height-s);
+  padding: 0 var(--spacing-md);
+  gap: var(--spacing-xs);
+  font-size: var(--type-button-m-size);
+  font-weight: var(--type-button-m-weight);
+  line-height: var(--type-button-m-line-height);
+}
+/* S = 28 (no 28px token; closest control-height-s=32) — see tokensNeeded */
+.s {
+  height: var(--control-height-s);
+  padding: 0 var(--spacing-md);
+  gap: var(--spacing-xxs);
+  font-size: var(--type-button-s-size);
+  font-weight: var(--type-button-s-weight);
+  line-height: var(--type-button-s-line-height);
+}
+
+/* ---- state ---- */
+.unselected {
+  background: transparent;
+  color: var(--color-semantic-text-primary);
+  border: var(--border-width-default) solid var(--color-semantic-border-default);
+}
+.selected {
+  background: var(--color-semantic-state-selected-brand);
+  color: var(--color-semantic-brand-primary);
+  border: var(--border-width-default) solid var(--color-semantic-brand-primary);
+}
+.disabled {
+  background: var(--color-semantic-state-disabled-fill);
+  color: var(--color-semantic-state-disabled-content);
+}

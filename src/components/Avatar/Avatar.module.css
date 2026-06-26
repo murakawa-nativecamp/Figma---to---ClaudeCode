@@ -1,0 +1,39 @@
+/* Avatar — circular icon w/ initials fallback. Token-bound only. Figma 2289:2. */
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: var(--radius-full);
+  background: var(--color-semantic-surface-tertiary);
+  color: var(--color-semantic-text-primary);
+}
+.img { width: 100%; height: 100%; object-fit: cover; }
+.initials { line-height: 1; }
+
+/* ---- size: square px (avatar.md) + initials typography ---- */
+.xl {
+  width: var(--icon-size-4xl);
+  height: var(--icon-size-4xl);
+  font-size: var(--type-subtitle-l-size);
+  font-weight: var(--type-subtitle-l-weight);
+}
+.l {
+  width: var(--icon-size-2xl);
+  height: var(--icon-size-2xl);
+  font-size: var(--type-subtitle-l-size);
+  font-weight: var(--type-subtitle-l-weight);
+}
+.m {
+  width: var(--icon-size-xl);
+  height: var(--icon-size-xl);
+  font-size: var(--type-button-m-size);
+  font-weight: var(--type-button-m-weight);
+}
+.s {
+  width: var(--icon-size-l);
+  height: var(--icon-size-l);
+  font-size: var(--type-button-s-size);
+  font-weight: var(--type-button-s-weight);
+}

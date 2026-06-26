@@ -1,0 +1,42 @@
+/* Chip — selectable/filter label. Token-bound only. Figma 2239:2. */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  border-radius: var(--radius-full);
+  font-family: var(--type-button-s-family), system-ui, sans-serif;
+  font-size: var(--type-button-s-size);
+  font-weight: var(--type-button-s-weight);
+  line-height: var(--type-button-s-line-height);
+}
+
+/* ---- size: height + padding-x (chip.md spacing scale) ---- */
+.l {
+  height: var(--control-height-m);
+  padding: 0 var(--spacing-base);
+}
+.m {
+  height: var(--control-height-s);
+  padding: 0 var(--spacing-md);
+}
+.s {
+  height: var(--control-height-s);
+  padding: 0 var(--spacing-sm);
+}
+
+/* ---- state ---- */
+.default {
+  background: transparent;
+  color: var(--color-semantic-text-primary);
+  border: var(--border-width-default) solid var(--color-semantic-border-default);
+}
+.selected {
+  background: var(--color-semantic-brand-primary);
+  color: var(--color-semantic-text-onbrand);
+}
+.disabled {
+  background: var(--color-semantic-state-disabled-fill);
+  color: var(--color-semantic-state-disabled-content);
+}
