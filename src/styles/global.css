@@ -1,0 +1,12 @@
+/* Dark theme is the only theme (NativeCamp APP). Values come from tokens.css only. */
+@import "./tokens.css";
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--color-semantic-surface-primary);
+  color: var(--color-semantic-text-primary);
+  font-family: var(--type-body-m-family), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
