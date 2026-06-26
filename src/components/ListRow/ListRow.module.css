@@ -1,0 +1,65 @@
+/* ListRow — token-bound only. Contract: list.md · Figma 1040:83. Height 56px = control-height-xl. */
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  height: var(--control-height-xl);
+  padding: var(--spacing-xs) var(--spacing-base);
+  box-sizing: border-box;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size-m);
+  height: var(--icon-size-m);
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  background: var(--color-semantic-surface-tertiary);
+  color: var(--color-semantic-text-primary);
+}
+
+.label {
+  flex: 1;
+  font-family: var(--type-body-m-strong-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-strong-size);
+  font-weight: var(--type-body-m-strong-weight);
+  line-height: var(--type-body-m-strong-line-height);
+  color: var(--color-semantic-text-primary);
+}
+
+.badge { display: inline-flex; flex-shrink: 0; }
+
+.trailing {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-shrink: 0;
+}
+
+.value {
+  font-family: var(--type-body-m-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-size);
+  font-weight: var(--type-body-m-weight);
+  line-height: var(--type-body-m-line-height);
+  color: var(--color-semantic-text-secondary);
+}
+
+/* chevron: caret pointing right */
+.chevron {
+  display: inline-block;
+  width: var(--icon-size-s);
+  height: var(--icon-size-s);
+  border-right: var(--border-width-default) solid var(--color-semantic-text-secondary);
+  border-bottom: var(--border-width-default) solid var(--color-semantic-text-secondary);
+  transform: rotate(-45deg);
+}
+
+.disabled {
+  background: var(--color-semantic-state-disabled-fill);
+}
+.disabled .label,
+.disabled .value {
+  color: var(--color-semantic-state-disabled-content);
+}

@@ -1,0 +1,10 @@
+/* DropdownFilter — token-bound only. Contract: dropdown-filter.md · Figma 2142:37. */
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxs);
+  background: var(--color-semantic-surface-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-sm);
+  box-shadow: var(--shadow-md);
+}

@@ -1,0 +1,11 @@
+/* HistoryList — token-bound only. Contract: history-list.md · Figma 2783:1576. */
+.list {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.item + .item {
+  border-top: var(--border-width-subtle) solid var(--color-semantic-divider-default);
+}

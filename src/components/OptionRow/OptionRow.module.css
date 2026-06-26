@@ -1,0 +1,59 @@
+/* OptionRow — token-bound only. Contract: option-list.md · Figma 2543:18. */
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  width: 100%;
+  padding: var(--spacing-base);
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  border: var(--border-width-strong) solid var(--color-semantic-border-strong);
+  border-radius: var(--radius-md);
+}
+.selected {
+  background: var(--color-semantic-state-selected-brand);
+  border-color: var(--color-semantic-brand-primary);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxs);
+  flex: 1;
+}
+.title {
+  font-family: var(--type-body-m-strong-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-strong-size);
+  font-weight: var(--type-body-m-strong-weight);
+  line-height: var(--type-body-m-strong-line-height);
+  color: var(--color-semantic-text-primary);
+}
+.description {
+  font-family: var(--type-body-m-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-size);
+  font-weight: var(--type-body-m-weight);
+  line-height: var(--type-body-m-line-height);
+  color: var(--color-semantic-text-secondary);
+}
+
+/* radio */
+.radio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size-m);
+  height: var(--icon-size-m);
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  border: var(--border-width-strong) solid var(--color-semantic-border-strong);
+}
+.selected .radio {
+  border-color: var(--color-semantic-brand-primary);
+}
+.radioDot {
+  width: var(--spacing-sm);
+  height: var(--spacing-sm);
+  border-radius: var(--radius-full);
+  background: var(--color-semantic-brand-primary);
+}

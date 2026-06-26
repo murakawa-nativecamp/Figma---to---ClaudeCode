@@ -1,0 +1,43 @@
+/* DropdownItem — token-bound only. Contract: dropdown-filter.md · Figma 2141:14. */
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  width: 100%;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+}
+
+.label {
+  flex: 1;
+  font-family: var(--type-caption-l-family), system-ui, sans-serif;
+  font-size: var(--type-caption-l-size);
+  font-weight: var(--type-caption-l-weight);
+  line-height: var(--type-caption-l-line-height);
+}
+
+.default { color: var(--color-semantic-text-primary); }
+.selected {
+  background: var(--color-semantic-state-selected-brand);
+  color: var(--color-semantic-brand-primary);
+}
+.disabled {
+  color: var(--color-semantic-state-disabled-content);
+  cursor: not-allowed;
+}
+
+/* check mark: small caret on selected */
+.check {
+  display: inline-block;
+  width: var(--icon-size-xs);
+  height: var(--icon-size-s);
+  flex-shrink: 0;
+  border-right: var(--border-width-strong) solid var(--color-semantic-brand-primary);
+  border-bottom: var(--border-width-strong) solid var(--color-semantic-brand-primary);
+  transform: rotate(45deg);
+}
