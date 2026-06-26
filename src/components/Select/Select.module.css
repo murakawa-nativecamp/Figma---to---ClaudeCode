@@ -1,0 +1,69 @@
+/* Select — token-bound. Contract: select.md · Figma 2170:39. */
+
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.label {
+  font-family: var(--type-caption-l-family), system-ui, sans-serif;
+  font-size: var(--type-caption-l-size);
+  font-weight: var(--type-caption-l-weight);
+  line-height: var(--type-caption-l-line-height);
+  color: var(--color-semantic-text-secondary);
+}
+
+.field {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 0 var(--spacing-base);
+  height: var(--control-height-l);
+  border-radius: var(--radius-md);
+  border: var(--border-width-default) solid var(--color-semantic-border-strong);
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.value {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--type-body-m-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-size);
+  font-weight: var(--type-body-m-weight);
+  line-height: var(--type-body-m-line-height);
+  color: var(--color-semantic-text-primary);
+}
+.placeholder { color: var(--color-semantic-text-tertiary); }
+
+.chevron {
+  flex: 0 0 auto;
+  width: var(--icon-size-m);
+  height: var(--icon-size-m);
+  color: var(--color-semantic-text-secondary);
+}
+
+.helper {
+  font-family: var(--type-caption-m-family), system-ui, sans-serif;
+  font-size: var(--type-caption-m-size);
+  font-weight: var(--type-caption-m-weight);
+  line-height: var(--type-caption-m-line-height);
+  color: var(--color-semantic-text-secondary);
+}
+
+/* ---- state ---- */
+.filled { border-color: var(--color-semantic-border-strong); }
+.open {
+  border-color: var(--color-semantic-brand-primary);
+  border-width: var(--border-width-strong);
+}
+.error { border-color: var(--color-semantic-status-error-default); }
+.helperError { color: var(--color-semantic-status-error-default); }
+.disabled {
+  border-color: var(--color-semantic-border-subtle);
+  cursor: not-allowed;
+}
+.disabled .value,
+.disabled .chevron { color: var(--color-semantic-state-disabled-content); }
