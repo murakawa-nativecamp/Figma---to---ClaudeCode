@@ -1,0 +1,35 @@
+/* SelectCompact — token-bound. Contract: select.md#select-compact · Figma 2178:55. */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border: 0;
+  border-radius: var(--radius-md);
+  background: var(--color-semantic-surface-tertiary);
+  cursor: pointer;
+}
+
+.value {
+  font-family: var(--type-subtitle-l-family), system-ui, sans-serif;
+  font-size: var(--type-subtitle-l-size);
+  font-weight: var(--type-subtitle-l-weight);
+  line-height: var(--type-subtitle-l-line-height);
+  color: var(--color-semantic-text-primary);
+}
+
+.chevron {
+  flex: 0 0 auto;
+  width: var(--icon-size-m);
+  height: var(--icon-size-m);
+  color: var(--color-semantic-text-secondary);
+}
+
+/* ---- state ---- */
+.disabled {
+  background: var(--color-semantic-state-disabled-fill);
+  cursor: not-allowed;
+}
+.disabled .value,
+.disabled .chevron { color: var(--color-semantic-state-disabled-content); }

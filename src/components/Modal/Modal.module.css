@@ -1,0 +1,70 @@
+/* Modal — overlay sheet. Tokens only. Contract: modal.md · node 2371:83. */
+
+.sheet {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  background: var(--color-semantic-surface-elevated);
+  box-shadow: var(--shadow-md);
+}
+
+.dialog,
+.modal {
+  width: 100%;
+  max-width: 22rem;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-2xl);
+}
+
+.bottomSheet {
+  width: 100%;
+  padding: var(--spacing-xl);
+  border-top-left-radius: var(--radius-2xl);
+  border-top-right-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-sheet);
+}
+
+.handle {
+  align-self: center;
+  width: var(--spacing-3xl);
+  height: var(--spacing-xxs);
+  border-radius: var(--radius-full);
+  background: var(--color-semantic-divider-strong);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--type-title-m-family), system-ui, sans-serif;
+  font-size: var(--type-title-m-size);
+  font-weight: var(--type-title-m-weight);
+  line-height: var(--type-title-m-line-height);
+  color: var(--color-semantic-text-primary);
+}
+
+.close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size-l);
+  height: var(--icon-size-l);
+  margin-left: auto;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--color-semantic-text-secondary);
+  font-size: var(--type-body-l-size);
+}
+
+.content {
+  font-family: var(--type-body-m-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-size);
+  line-height: var(--type-body-m-line-height);
+  color: var(--color-semantic-text-primary);
+}

@@ -1,0 +1,34 @@
+/* Divider — region separator. Token-bound only. Figma 2249:2. */
+.divider { box-sizing: border-box; }
+
+.horizontal {
+  width: 100%;
+  height: var(--border-width-subtle);
+  background: var(--color-semantic-divider-default);
+}
+.vertical {
+  align-self: stretch;
+  width: var(--border-width-subtle);
+  background: var(--color-semantic-divider-default);
+}
+
+/* withLabel: line + centered label + line */
+.withLabel {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: var(--spacing-md);
+}
+.withLabel .line {
+  flex: 1;
+  height: var(--border-width-subtle);
+  background: var(--color-semantic-divider-default);
+}
+.withLabel .label {
+  white-space: nowrap;
+  color: var(--color-semantic-text-secondary);
+  font-family: var(--type-caption-l-family), system-ui, sans-serif;
+  font-size: var(--type-caption-l-size);
+  font-weight: var(--type-caption-l-weight);
+  line-height: var(--type-caption-l-line-height);
+}

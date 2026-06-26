@@ -1,0 +1,101 @@
+/* Card — generic container. Tokens only. Contract: card.md · node 2524:2. */
+
+.card {
+  background: var(--color-semantic-surface-elevated);
+  border: var(--border-width-default) solid var(--color-semantic-border-default);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-base);
+}
+
+/* ---- vertical ---- */
+.vertical {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+.media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
+  background: var(--color-semantic-surface-secondary);
+}
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+.title {
+  margin: 0;
+  font-family: var(--type-title-m-family), system-ui, sans-serif;
+  font-size: var(--type-title-m-size);
+  font-weight: var(--type-title-m-weight);
+  line-height: var(--type-title-m-line-height);
+  color: var(--color-semantic-text-primary);
+}
+.body {
+  margin: 0;
+  font-family: var(--type-body-s-family), system-ui, sans-serif;
+  font-size: var(--type-body-s-size);
+  font-weight: var(--type-body-s-weight);
+  line-height: var(--type-body-s-line-height);
+  color: var(--color-semantic-text-secondary);
+}
+.actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+/* ---- horizontal ---- */
+.horizontal {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+.thumb {
+  width: var(--icon-size-3xl);
+  height: var(--icon-size-3xl);
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  background: var(--color-semantic-surface-secondary);
+}
+.hbody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+.htitle {
+  margin: 0;
+  font-family: var(--type-subtitle-l-family), system-ui, sans-serif;
+  font-size: var(--type-subtitle-l-size);
+  font-weight: var(--type-subtitle-l-weight);
+  line-height: var(--type-subtitle-l-line-height);
+  color: var(--color-semantic-text-primary);
+}
+.valueRow {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-xxs);
+}
+.value {
+  font-family: var(--type-title-m-family), system-ui, sans-serif;
+  font-size: var(--type-title-m-size);
+  font-weight: var(--type-title-m-weight);
+  line-height: var(--type-title-m-line-height);
+  color: var(--color-semantic-text-primary);
+}
+.unit {
+  font-family: var(--type-body-s-family), system-ui, sans-serif;
+  font-size: var(--type-body-s-size);
+  color: var(--color-semantic-text-secondary);
+}
+.caption {
+  font-family: var(--type-body-s-family), system-ui, sans-serif;
+  font-size: var(--type-body-s-size);
+  color: var(--color-semantic-text-tertiary);
+}
+.chevron {
+  flex-shrink: 0;
+  color: var(--color-semantic-text-secondary);
+  font-size: var(--type-title-m-size);
+}

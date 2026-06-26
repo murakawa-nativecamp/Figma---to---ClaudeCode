@@ -1,0 +1,19 @@
+/* ActionSheetRow — single action row. Tokens only. Contract: action-sheet.md · node 2439:8. */
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: var(--spacing-base);
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--type-body-m-strong-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-strong-size);
+  font-weight: var(--type-body-m-strong-weight);
+  line-height: var(--type-body-m-strong-line-height);
+}
+
+.default { color: var(--color-semantic-text-primary); }
+.destructive { color: var(--color-semantic-status-error-default); }

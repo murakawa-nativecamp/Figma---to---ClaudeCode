@@ -1,0 +1,58 @@
+/* Stepper — token-bound. Contract: stepper.md · Figma 2295:18. */
+
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--radius-md);
+  background: var(--color-semantic-surface-secondary);
+  overflow: hidden;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--control-height-m);
+  height: var(--control-height-m);
+  padding: 0;
+  border: 0;
+  background: var(--color-semantic-surface-tertiary);
+  color: var(--color-semantic-text-primary);
+  cursor: pointer;
+}
+.btn:disabled {
+  background: var(--color-semantic-state-disabled-fill);
+  color: var(--color-semantic-state-disabled-content);
+  cursor: not-allowed;
+}
+
+.minus {
+  width: var(--spacing-md);
+  height: var(--border-width-strong);
+  background: currentColor;
+  border-radius: var(--radius-full);
+}
+.plus {
+  width: var(--icon-size-m);
+  height: var(--icon-size-m);
+}
+
+.value {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--control-height-m);
+  height: var(--control-height-m);
+  padding: 0 var(--spacing-md);
+  border-left: var(--border-width-subtle) solid var(--color-semantic-border-default);
+  border-right: var(--border-width-subtle) solid var(--color-semantic-border-default);
+  font-family: var(--type-subtitle-l-family), system-ui, sans-serif;
+  font-size: var(--type-subtitle-l-size);
+  font-weight: var(--type-subtitle-l-weight);
+  line-height: var(--type-subtitle-l-line-height);
+  color: var(--color-semantic-text-primary);
+}
+
+/* ---- state ---- */
+.disabled .value { color: var(--color-semantic-state-disabled-content); }
+.disabled { background: var(--color-semantic-state-disabled-fill); }

@@ -1,0 +1,51 @@
+/* Accordion — token-bound only. Contract: accordion.md · Figma 2427:12. */
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  width: 100%;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: var(--spacing-base);
+  text-align: left;
+}
+
+.title {
+  flex: 1;
+  font-family: var(--type-body-m-strong-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-strong-size);
+  font-weight: var(--type-body-m-strong-weight);
+  line-height: var(--type-body-m-strong-line-height);
+  color: var(--color-semantic-text-primary);
+}
+
+/* chevron: bordered box rotated to a caret; brand-colored */
+.chevron {
+  display: inline-block;
+  width: var(--icon-size-m);
+  height: var(--icon-size-m);
+  flex-shrink: 0;
+  border-right: var(--border-width-strong) solid var(--color-semantic-brand-primary);
+  border-bottom: var(--border-width-strong) solid var(--color-semantic-brand-primary);
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+.expanded .chevron {
+  transform: rotate(225deg);
+}
+
+.body {
+  padding: 0 var(--spacing-base) var(--spacing-base);
+  font-family: var(--type-body-s-family), system-ui, sans-serif;
+  font-size: var(--type-body-s-size);
+  font-weight: var(--type-body-s-weight);
+  line-height: var(--type-body-s-line-height);
+  color: var(--color-semantic-text-secondary);
+}

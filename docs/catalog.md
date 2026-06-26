@@ -41,66 +41,66 @@
 | Compact Button | `1375:2316` | **built** |
 | Icon Button | `987:339` | **built** |
 | Text Link | `990:227` | **built** |
-| Toggle Button | `983:224` | scaffold |
+| Toggle Button | `983:224` | **built** |
 | PlayButton | (lib) `87a5066…` | scaffold |
 
 ### Basic / form
 | コンポーネント | Figma node | status |
 |---|---|---|
 | Badge | `2156:5` | **built** |
-| Status Badge | `2732:246` | scaffold |
-| Input | `2063:27` | scaffold |
-| Textarea | `2757:2` | scaffold |
-| Checkbox | `2128:42` | scaffold |
-| Radio | `2134:23` | scaffold |
-| Toggle Switch | `1031:8` | scaffold |
-| Select | `2170:39` | scaffold |
-| Select Compact | `2178:55` | scaffold |
-| Chip | `2239:2` | scaffold |
-| Tag | `2259:2` | scaffold |
-| Divider | `2249:2` | scaffold |
-| Slider | `2294:6` | scaffold |
-| Stepper | `2295:18` | scaffold |
-| Avatar | `2289:2` | scaffold |
-| Spinner | `2283:2` | scaffold |
-| Skeleton | `2297:15` | scaffold |
-| Progress | `2292:4` | scaffold |
+| Status Badge | `2732:246` | **built** |
+| Input | `2063:27` | **built** |
+| Textarea | `2757:2` | **built** |
+| Checkbox | `2128:42` | **built** |
+| Radio | `2134:23` | **built** |
+| Toggle Switch | `1031:8` | **built** |
+| Select | `2170:39` | **built** |
+| Select Compact | `2178:55` | **built** |
+| Chip | `2239:2` | **built** |
+| Tag | `2259:2` | **built** |
+| Divider | `2249:2` | **built** |
+| Slider | `2294:6` | **built** |
+| Stepper | `2295:18` | **built** |
+| Avatar | `2289:2` | **built** |
+| Spinner | `2283:2` | **built** |
+| Skeleton | `2297:15` | **built** |
+| Progress | `2292:4` | **built** |
 | Icon (set) | `283:856` | scaffold |
 
 ### Navigation / structure
 | コンポーネント | Figma node | status |
 |---|---|---|
-| Tab | `2106:650` | scaffold |
-| TabBar | `2116:68` | scaffold |
-| header | `1719:234` | scaffold |
-| BottomNavItem | `2818:36` | scaffold |
-| BottomNavigation | `2819:253` | scaffold |
-| Accordion | `2427:12` | scaffold |
+| Tab | `2106:650` | **built** |
+| TabBar | `2116:68` | **built** |
+| header | `1719:234` | **built** |
+| BottomNavItem | `2818:36` | **built** |
+| BottomNavigation | `2819:253` | **built** |
+| Accordion | `2427:12` | **built** |
 | Accordions（Accordion 群コンテナ） | `2495:259` | scaffold |
-| List Row | `1040:83` | scaffold |
-| List | `1788:176` | scaffold |
-| History Row | `2776:1322` | scaffold |
-| History List | `2783:1576` | scaffold |
-| Option Row | `2543:18` | scaffold |
-| Option List | `2544:128` | scaffold |
-| DropdownItem | `2141:14` | scaffold |
-| DropdownFilter | `2142:37` | scaffold |
+| List Row | `1040:83` | **built** |
+| List | `1788:176` | **built** |
+| History Row | `2776:1322` | **built** |
+| History List | `2783:1576` | **built** |
+| Option Row | `2543:18` | **built** |
+| Option List | `2544:128` | **built** |
+| DropdownItem | `2141:14` | **built** |
+| DropdownFilter | `2142:37` | **built** |
 
 ### Overlays / feedback
 | コンポーネント | Figma node | status |
 |---|---|---|
-| Dialog | `2337:50` | scaffold |
-| Modal | `2371:83` | scaffold |
-| Banner | `2457:18` | scaffold |
-| Toast | `2468:12` | scaffold |
-| ActionSheet | `2440:14` | scaffold |
-| ActionSheet Row | `2439:8` | scaffold |
-| SearchBar | `2449:20` | scaffold |
-| Card | `2524:2` | scaffold |
-| Card Row | `2529:49` | scaffold |
-| CardList | `2530:215` | scaffold |
-| Card Action | `2731:240` | scaffold |
-| Lesson Card | `2733:2965` | scaffold |
+| Dialog | `2337:50` | **built** |
+| Modal | `2371:83` | **built** |
+| Banner | `2457:18` | **built** |
+| Toast | `2468:12` | **built** |
+| ActionSheet | `2440:14` | **built** |
+| ActionSheet Row | `2439:8` | **built** |
+| SearchBar | `2449:20` | **built** |
+| Card | `2524:2` | **built** |
+| Card Row | `2529:49` | **built** |
+| CardList | `2530:215` | **built** |
+| Card Action | `2731:240` | **built** |
+| Lesson Card | `2733:2965` | **built** |
 | Slot / Slot Icon | `2671:30` / `2670:15` | scaffold |
 
 > ⚠️ 命名衝突: `283:1452` の `Button`（page `Basic`）は **ロゴ切替**であり本 Button ではない。実 Button は `973:521`。

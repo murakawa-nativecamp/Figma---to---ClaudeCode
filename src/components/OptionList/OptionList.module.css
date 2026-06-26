@@ -1,0 +1,9 @@
+/* OptionList — token-bound only. Contract: option-list.md · Figma 2544:128. */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+.item {
+  display: flex;
+}

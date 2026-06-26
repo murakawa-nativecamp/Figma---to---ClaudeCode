@@ -1,0 +1,46 @@
+/* Radio — token-bound. Contract: radio.md · Figma 2134:23. */
+
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+}
+.rootDisabled { cursor: not-allowed; }
+
+.circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size-m);
+  height: var(--icon-size-m);
+  padding: 0;
+  border-radius: var(--radius-full);
+  border: var(--border-width-strong) solid var(--color-semantic-border-strong);
+  background: transparent;
+  cursor: inherit;
+}
+
+.dot {
+  width: 50%;
+  height: 50%;
+  border-radius: var(--radius-full);
+  background: var(--color-semantic-brand-primary);
+}
+
+.label {
+  font-family: var(--type-body-m-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-size);
+  font-weight: var(--type-body-m-weight);
+  line-height: var(--type-body-m-line-height);
+  color: var(--color-semantic-text-primary);
+}
+
+/* ---- value ---- */
+.selected { border-color: var(--color-semantic-brand-primary); }
+
+/* ---- state ---- */
+.error { border-color: var(--color-semantic-status-error-default); }
+.disabled { border-color: var(--color-semantic-border-subtle); }
+.disabled .dot { background: var(--color-semantic-state-disabled-content); }
+.rootDisabled .label { color: var(--color-semantic-state-disabled-content); }

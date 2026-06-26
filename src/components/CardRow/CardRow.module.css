@@ -1,0 +1,56 @@
+/* CardRow — flat list row. Tokens only. Contract: card-row.md · node 2529:49. */
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-base);
+  padding: var(--spacing-base);
+}
+
+.media {
+  display: inline-flex;
+  width: var(--icon-size-3xl);
+  height: var(--icon-size-3xl);
+  flex-shrink: 0;
+  background: var(--color-semantic-surface-secondary);
+}
+.thumbnail { border-radius: var(--radius-sm); }
+.avatar { border-radius: var(--radius-full); }
+
+.texts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxs);
+  min-width: 0;
+}
+
+.title {
+  font-family: var(--type-button-l-family), system-ui, sans-serif;
+  font-size: var(--type-button-l-size);
+  font-weight: var(--type-button-l-weight);
+  line-height: var(--type-button-l-line-height);
+  color: var(--color-semantic-text-primary);
+}
+
+.subtitle {
+  font-family: var(--type-caption-l-family), system-ui, sans-serif;
+  font-size: var(--type-caption-l-size);
+  font-weight: var(--type-caption-l-weight);
+  line-height: var(--type-caption-l-line-height);
+  color: var(--color-semantic-text-secondary);
+}
+
+.caption {
+  font-family: var(--type-caption-l-family), system-ui, sans-serif;
+  font-size: var(--type-caption-l-size);
+  font-weight: var(--type-caption-l-weight);
+  line-height: var(--type-caption-l-line-height);
+  color: var(--color-semantic-text-tertiary);
+}
+
+.chevron {
+  flex-shrink: 0;
+  color: var(--color-semantic-text-secondary);
+  font-size: var(--type-subtitle-l-size);
+}

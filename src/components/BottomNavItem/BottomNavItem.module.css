@@ -1,0 +1,39 @@
+/* BottomNavItem — token-bound only. Contract: bottom-navigation.md · Figma 2818:36. */
+.item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xxs);
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: var(--spacing-xxs);
+}
+
+.iconWrap {
+  position: relative;
+  display: inline-flex;
+}
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size-l);
+  height: var(--icon-size-l);
+}
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.label {
+  font-family: var(--type-caption-m-family), system-ui, sans-serif;
+  font-size: var(--type-caption-m-size);
+  font-weight: var(--type-caption-m-weight);
+  line-height: var(--type-caption-m-line-height);
+}
+
+.active { color: var(--color-semantic-brand-primary); }
+.inactive { color: var(--color-semantic-text-secondary); }

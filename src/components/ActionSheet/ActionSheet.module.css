@@ -1,0 +1,37 @@
+/* ActionSheet — bottom action menu. Tokens only. Contract: action-sheet.md · node 2440:14. */
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  width: 100%;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-semantic-surface-elevated);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sheet);
+  overflow: hidden;
+}
+
+/* row separators within the group */
+.group > * + * {
+  border-top: var(--border-width-subtle) solid var(--color-semantic-divider-default);
+}
+
+.cancel {
+  width: 100%;
+  padding: var(--spacing-base);
+  border: 0;
+  cursor: pointer;
+  background: var(--color-semantic-surface-elevated);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sheet);
+  color: var(--color-semantic-text-primary);
+  font-family: var(--type-body-m-strong-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-strong-size);
+  font-weight: var(--type-body-m-strong-weight);
+  line-height: var(--type-body-m-strong-line-height);
+}

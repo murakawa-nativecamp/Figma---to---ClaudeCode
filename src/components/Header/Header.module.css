@@ -1,0 +1,38 @@
+/* Header — token-bound only. Contract: header.md · Figma 1719:234. */
+.header {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-semantic-surface-primary);
+}
+
+.titleBand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xxs);
+  padding: var(--spacing-sm);
+}
+
+.title {
+  flex: 1;
+  font-family: var(--type-subtitle-l-family), system-ui, sans-serif;
+  font-size: var(--type-subtitle-l-size);
+  font-weight: var(--type-subtitle-l-weight);
+  line-height: var(--type-subtitle-l-line-height);
+  color: var(--color-semantic-text-primary);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size-l);
+  height: var(--icon-size-l);
+  color: var(--color-semantic-text-primary);
+}
+
+.actionArea {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+}

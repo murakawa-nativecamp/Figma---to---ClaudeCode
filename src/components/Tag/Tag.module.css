@@ -1,0 +1,32 @@
+/* Tag — semantic classification label. Token-bound only. Figma 2259:2. */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-xxs) var(--spacing-sm-plus);
+  font-family: var(--type-caption-l-family), system-ui, sans-serif;
+  font-size: var(--type-caption-l-size);
+  font-weight: var(--type-caption-l-weight);
+  line-height: var(--type-caption-l-line-height);
+}
+
+/* ---- color: text / background (tag.md early-reference table) ---- */
+.success {
+  color: var(--color-semantic-status-success-default);
+  background: var(--color-semantic-status-success-background);
+}
+.error {
+  color: var(--color-semantic-status-error-default);
+  background: var(--color-semantic-status-error-background);
+}
+.warning {
+  color: var(--color-semantic-status-warning-default);
+  background: var(--color-semantic-status-warning-background);
+}
+.neutral {
+  color: var(--color-semantic-text-secondary);
+  background: var(--color-semantic-surface-tertiary);
+}

@@ -1,0 +1,62 @@
+/* HistoryRow — token-bound only. Contract: history-list.md · Figma 2776:1322. */
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-base);
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size-l);
+  height: var(--icon-size-l);
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  flex: 1;
+  min-width: 0;
+}
+
+.head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-sm);
+}
+
+.name {
+  font-family: var(--type-subtitle-l-family), system-ui, sans-serif;
+  font-size: var(--type-subtitle-l-size);
+  font-weight: var(--type-subtitle-l-weight);
+  line-height: var(--type-subtitle-l-line-height);
+  color: var(--color-semantic-text-primary);
+}
+
+.timestamp {
+  font-family: var(--type-caption-l-family), system-ui, sans-serif;
+  font-size: var(--type-caption-l-size);
+  font-weight: var(--type-caption-l-weight);
+  line-height: var(--type-caption-l-line-height);
+  color: var(--color-semantic-text-secondary);
+}
+
+.message {
+  font-family: var(--type-body-m-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-size);
+  font-weight: var(--type-body-m-weight);
+  line-height: var(--type-body-m-line-height);
+  color: var(--color-semantic-text-primary);
+}
+
+.trailing {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}

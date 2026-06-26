@@ -1,0 +1,20 @@
+/* StatusBadge — lesson-state badge. Token-bound only. Figma 2732:246. */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  padding: var(--spacing-xxs) var(--spacing-xs);
+  border-radius: var(--radius-sm);
+  color: var(--color-semantic-text-onbrand);
+  font-family: var(--type-caption-m-family), system-ui, sans-serif;
+  font-size: var(--type-caption-m-size);
+  font-weight: var(--type-caption-m-weight);
+  line-height: var(--type-caption-m-line-height);
+}
+
+/* ---- status: lesson color fill (status-badge.md) ---- */
+.reservation { background: var(--color-semantic-lesson-reservation); }
+.now { background: var(--color-semantic-lesson-now); }
+.live { background: var(--color-semantic-lesson-live); }

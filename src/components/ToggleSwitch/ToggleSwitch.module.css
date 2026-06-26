@@ -1,0 +1,38 @@
+/* ToggleSwitch — token-bound. Contract: toggle-switch.md · Figma 1031:8.
+   Fixed 38×22 has no exact token; closest spacing/icon tokens used (see report). */
+
+.track {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  /* 38×22 → closest tokens: 40 / 24 */
+  width: var(--spacing-3xl);
+  height: var(--spacing-xl);
+  padding: var(--spacing-xxs);
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--color-semantic-border-default);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.knob {
+  display: block;
+  /* knob ~18 → closest token 16 */
+  width: var(--icon-size-s);
+  height: var(--icon-size-s);
+  border-radius: var(--radius-full);
+  background: var(--color-base-white);
+  transition: transform 0.2s ease;
+}
+
+/* ---- state ---- */
+.on { background: var(--color-semantic-brand-primary); }
+.on .knob { transform: translateX(100%); }
+
+.disabled {
+  background: var(--color-semantic-state-disabled-fill);
+  cursor: not-allowed;
+}
+.disabled .knob { background: var(--color-semantic-state-disabled-content); }
