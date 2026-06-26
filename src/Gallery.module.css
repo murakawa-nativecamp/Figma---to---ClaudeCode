@@ -1,0 +1,18 @@
+/* Gallery/preview layout only (not a DS component → exempt from no-hardcode lint).
+   Still references DS tokens where it can. */
+.page { padding: var(--spacing-xl); max-width: 960px; margin: 0 auto; }
+.h1 { font-size: var(--type-title-l-size); font-weight: var(--type-title-l-weight); margin: 0 0 var(--spacing-xs); }
+.note { color: var(--color-semantic-text-secondary); font-size: var(--type-body-s-size); margin: 0 0 var(--spacing-2xl); }
+.section { margin-bottom: var(--spacing-3xl); }
+.sectionTitle {
+  font-size: var(--type-subtitle-l-size);
+  font-weight: var(--type-subtitle-l-weight);
+  margin: 0 0 var(--spacing-md);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: var(--border-width-subtle) solid var(--color-semantic-divider-default);
+}
+.row { display: flex; align-items: center; gap: var(--spacing-md); flex-wrap: wrap; margin-bottom: var(--spacing-sm); }
+.sizeTag { width: 64px; font-size: var(--type-caption-l-size); color: var(--color-semantic-text-tertiary); }
+.variantTag { font-size: var(--type-caption-l-size); color: var(--color-semantic-text-secondary); margin: var(--spacing-md) 0 var(--spacing-xs); }
+.stateCol { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-xxs); }
+.stateLabel { font-size: var(--type-caption-m-size); color: var(--color-semantic-text-tertiary); }

@@ -1,0 +1,7 @@
+{
+  "codeConnect": {
+    "parser": "react",
+    "include": ["src/components/**/*.figma.tsx"],
+    "interactiveSetupFigmaFileUrl": "https://www.figma.com/design/DKl4vZ6OAtXYhuvMHbWkRZ/Design-System---APP"
+  }
+}

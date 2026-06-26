@@ -1,0 +1,40 @@
+/* IconButton — square/circle icon-only button. Token-bound only. Figma 987:339. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+.btn:active { opacity: 0.85; }
+
+/* shape */
+.circle { border-radius: var(--radius-full); }
+.square { border-radius: var(--radius-lg); }
+
+/* size: square side = control height; icon font-size = iconSize token */
+.xl { width: var(--control-height-xl); height: var(--control-height-xl); font-size: var(--icon-size-xl); }
+.l  { width: var(--control-height-l);  height: var(--control-height-l);  font-size: var(--icon-size-l); }
+.m  { width: var(--control-height-m);  height: var(--control-height-m);  font-size: var(--icon-size-m); }
+.s  { width: var(--control-height-s);  height: var(--control-height-s);  font-size: var(--icon-size-s); }
+
+/* variant (no gradient for IconButton) */
+.primary { background: var(--color-semantic-brand-primary); color: var(--color-semantic-text-onbrand); }
+.secondary {
+  background: transparent;
+  color: var(--color-semantic-text-primary);
+  border: var(--border-width-default) solid var(--color-semantic-border-default);
+}
+.tertiary { background: var(--color-semantic-surface-tertiary); color: var(--color-semantic-text-primary); }
+.ghost { background: transparent; color: var(--color-semantic-text-primary); }
+.danger { background: var(--color-semantic-status-error-default); color: var(--color-semantic-text-onbrand); }
+.reservation { background: var(--color-semantic-lesson-reservation); color: var(--color-semantic-text-onbrand); }
+
+.disabled {
+  background: var(--color-semantic-state-disabled-fill) !important;
+  color: var(--color-semantic-state-disabled-content) !important;
+  border: 0 !important;
+  cursor: not-allowed;
+}
+.icon { display: inline-flex; align-items: center; justify-content: center; line-height: 1; }

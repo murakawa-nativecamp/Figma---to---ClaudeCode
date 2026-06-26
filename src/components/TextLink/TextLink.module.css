@@ -1,0 +1,21 @@
+/* TextLink — inline text link. Token-bound only. Figma 990:227. */
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xxs);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  color: var(--color-semantic-text-link);
+  font-family: var(--type-button-l-family), system-ui, sans-serif;
+  text-decoration: none;
+}
+.link:hover { text-decoration: underline; }
+
+.l { font-size: var(--type-button-l-size); font-weight: var(--type-button-l-weight); line-height: var(--type-button-l-line-height); }
+.m { font-size: var(--type-button-m-size); font-weight: var(--type-button-m-weight); line-height: var(--type-button-m-line-height); }
+.s { font-size: var(--type-button-s-size); font-weight: var(--type-button-s-weight); line-height: var(--type-button-s-line-height); }
+
+.disabled { color: var(--color-semantic-state-disabled-content); cursor: not-allowed; text-decoration: none; }
+.icon { display: inline-flex; align-items: center; }

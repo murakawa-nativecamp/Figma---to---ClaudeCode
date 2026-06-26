@@ -1,0 +1,32 @@
+/* Badge — small count/state indicator. Token-bound only. Figma 2156:5. */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: var(--color-semantic-brand-primary);
+  color: var(--color-semantic-text-onbrand);
+  border-radius: var(--radius-full);
+  font-family: var(--type-caption-m-family), system-ui, sans-serif;
+  font-size: var(--type-caption-m-size);
+  font-weight: var(--type-caption-m-weight);
+  line-height: var(--type-caption-m-line-height);
+}
+
+/* number / new: pill with padding; min square via icon-size token */
+.number,
+.new {
+  min-width: var(--icon-size-s);
+  height: var(--icon-size-s);
+  padding: 0 var(--spacing-xs);
+}
+
+/* dot: tiny circle, no label */
+.dot {
+  width: var(--spacing-sm);
+  height: var(--spacing-sm);
+  padding: 0;
+}
+
+/* ring when overlaid on icons/tabs */
+.bordered { box-shadow: 0 0 0 var(--border-width-strong) var(--color-semantic-surface-secondary); }

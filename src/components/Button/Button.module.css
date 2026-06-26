@@ -1,0 +1,85 @@
+/* Button — every value references a token via var(--...). No raw hex/px.
+   Contract: docs ../button.md (canon) · Figma node 973:521. */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: var(--radius-full);
+  font-family: var(--type-button-l-family), system-ui, sans-serif;
+}
+.btn:active { opacity: 0.85; }
+
+/* ---- size: height + typography + padding-x + gap (button.md) ---- */
+.xl {
+  height: var(--control-height-xl);
+  padding: 0 var(--spacing-base);
+  gap: var(--spacing-sm);
+  font-size: var(--type-button-xl-size);
+  font-weight: var(--type-button-xl-weight);
+  line-height: var(--type-button-xl-line-height);
+}
+.l {
+  height: var(--control-height-l);
+  padding: 0 var(--spacing-md);
+  gap: var(--spacing-sm);
+  font-size: var(--type-button-l-size);
+  font-weight: var(--type-button-l-weight);
+  line-height: var(--type-button-l-line-height);
+}
+.m {
+  height: var(--control-height-m);
+  padding: 0 var(--spacing-sm-plus);
+  gap: var(--spacing-xs);
+  font-size: var(--type-button-m-size);
+  font-weight: var(--type-button-m-weight);
+  line-height: var(--type-button-m-line-height);
+}
+.s {
+  height: var(--control-height-s);
+  padding: 0 var(--spacing-sm);
+  gap: var(--spacing-xxs);
+  font-size: var(--type-button-s-size);
+  font-weight: var(--type-button-s-weight);
+  line-height: var(--type-button-s-line-height);
+}
+
+/* ---- variant: background / text / border (button.md early-reference table) ---- */
+.primary { background: var(--color-semantic-brand-primary); color: var(--color-semantic-text-onbrand); }
+.gradient { background: var(--color-semantic-brand-primary-gradient); color: var(--color-semantic-text-onbrand); }
+.secondary {
+  background: transparent;
+  color: var(--color-semantic-text-primary);
+  border: var(--border-width-default) solid var(--color-semantic-border-default);
+}
+.tertiary { background: var(--color-semantic-surface-tertiary); color: var(--color-semantic-text-primary); }
+.ghost { background: transparent; color: var(--color-semantic-text-primary); }
+.danger { background: var(--color-semantic-status-error-default); color: var(--color-semantic-text-onbrand); }
+.reservation { background: var(--color-semantic-lesson-reservation); color: var(--color-semantic-text-onbrand); }
+
+/* ---- state ---- */
+.disabled {
+  background: var(--color-semantic-state-disabled-fill) !important;
+  color: var(--color-semantic-state-disabled-content) !important;
+  border: 0 !important;
+  cursor: not-allowed;
+}
+.loading { cursor: wait; }
+.loading .label { visibility: hidden; }
+
+.icon { display: inline-flex; align-items: center; justify-content: center; }
+
+.spinner {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  border: var(--border-width-strong) solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.btnInner { display: inline-flex; align-items: center; justify-content: center; position: relative; gap: inherit; }
