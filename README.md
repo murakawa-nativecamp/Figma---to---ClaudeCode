@@ -22,9 +22,12 @@ npm run dev        # プレビュー http://localhost:5191/
 3. **着手前に接続ライブラリを検索**（`search_design_system`）。
 4. **再現ループ**: 検索 → インスタンス利用 → トークン束縛 → スクショ検証。
 
-## スキル（`.claude/skills/`）
-`figma-preflight` / `component-conventions` / `token-binding-verify` / `reference-to-brief`。
-作業内容に応じて自動で参照される。
+## プラグイン（`figma-ds-harness`）
+強制スキル（`figma-preflight` / `component-conventions` / `token-binding-verify` / `reference-to-brief`）と
+再現コマンド（`/figma-ds-harness:reproduce-screen` ほか）は Claude Code プラグインとして同梱。
+clone → `.claude/settings.json` を trust で導入が促される。手動: `/plugin marketplace add .` →
+`/plugin install figma-ds-harness@nc-figma-ds`。詳細は [`figma-ds-harness/README.md`](figma-ds-harness/README.md)。
+前提: 公式 Figma Dev Mode MCP が有効であること（プラグインは MCP 非同梱）。
 
 ## 実装ステータス
 `built`: Button, CompactButton, IconButton, TextLink, Badge。

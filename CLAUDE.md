@@ -62,13 +62,18 @@ src/styles/tokens.css       CSS変数（生成物・手編集禁止）
 src/components/<Name>/       <Name>.tsx / <Name>.module.css / <Name>.figma.tsx
 scripts/gen-tokens.mjs       生成器   scripts/validate-tokens.mjs  検証
 docs/catalog.md              トークン+コンポーネント一覧 + 生成ループ
-.claude/skills/              強制スキル（preflight / 規約 / 束縛+検証 / 参照→ブリーフ）
+figma-ds-harness/            強制スキル＋再現コマンドの Claude Code プラグイン（正典）
+.claude-plugin/marketplace.json  本リポ自身のマーケットプレイス（self-ref）
+.claude/settings.json        マーケットプレイス宣言 + enabledPlugins（trust で導入を促す）
 ```
 
-## スキル（`.claude/skills/`）
-- **figma-preflight**: 着手前チェック（ライブラリ検索・正典確認）。
-- **component-conventions**: コンポーネント生成の規約（契約忠実・命名・ファイル構成）。
-- **token-binding-verify**: トークン束縛と `npm run validate` + スクショ検証の実行。
-- **reference-to-brief**: 参照画像/URL → デザインブリーフ（既存DS語彙へのマッピング）への変換。
+## スキル / コマンド（プラグイン `figma-ds-harness` が提供）
+強制スキル群は **プラグイン側を正典**とする（バレな `.claude/skills` は廃止し移設済み）。
+clone して `.claude/settings.json` を trust すると導入が促される。手動なら:
+`/plugin marketplace add .` → `/plugin install figma-ds-harness@nc-figma-ds`（詳細 [`figma-ds-harness/README.md`](figma-ds-harness/README.md)）。
 
-これらは該当作業時に自動的に参照されます。困ったら `docs/catalog.md` の「生成ループ」に戻ること。
+- スキル: **figma-preflight**（着手前チェック）/ **component-conventions**（生成規約）/ **token-binding-verify**（束縛+検証）/ **reference-to-brief**（参照→ブリーフ）。
+- コマンド: `/figma-ds-harness:reproduce-screen` / `:ds-preflight` / `:verify-tokens` / `:ds-rules`。
+- スキルはプロジェクト非依存。本 `CLAUDE.md` が具体（file key `DKl4vZ6OAtXYhuvMHbWkRZ`・`docs/catalog.md`・`npm run validate`・preview 5191）を供給する。
+
+> 前提: 公式 Figma Dev Mode MCP が有効であること（プラグインは MCP を同梱しない）。困ったら `docs/catalog.md` の「生成ループ」に戻ること。
