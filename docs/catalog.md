@@ -11,16 +11,19 @@
 | グループ | 数 | CSS変数プレフィックス | 例 |
 |---|---|---|---|
 | color.base | 2 | `--color-base-*` | `--color-base-white` |
-| color.primitive | 90 | `--color-primitive-*` | `--color-primitive-orange-500` (#F1890E) |
-| color.semantic | 50+ | `--color-semantic-*` | `--color-semantic-brand-primary`, `--color-semantic-text-onbrand` |
-| └ gradient | 1 | `--color-semantic-brand-primary-gradient` | `linear-gradient(90deg,#FF6B35 0%,#EEB633 100%)` |
-| spacing | 9 | `--spacing-*` | `--spacing-base`(16px), `--spacing-md`(12px) |
+| color.primitive | 110 | `--color-primitive-*` | `--color-primitive-orange-500` (#F1890E) |
+| color.semantic | 40 | `--color-semantic-*` | `--color-semantic-brand-primary`, `--color-semantic-text-onbrand` |
+| └ うち gradient | 1 | `--color-semantic-brand-primary-gradient` | `linear-gradient(90deg,#FF6B35 0%,#EEB633 100%)` |
+| spacing | 10 | `--spacing-*` | `--spacing-base`(16px), `--spacing-md`(12px) |
 | radius | 8 | `--radius-*` | `--radius-full`(9999px), `--radius-lg`(12px) |
 | iconSize | 9 | `--icon-size-*` | `--icon-size-l`(24px) |
 | controlHeight | 4 | `--control-height-*` | `--control-height-xl`(56px) *(React ハーネス追加トークン)* |
-| typography | 24 styles | `--type-<name>-{family,size,weight,line-height}` | `--type-button-xl-size`(20px) |
+| typography | 21 styles | `--type-<name>-{family,size,weight,line-height}` | `--type-button-xl-size`(20px) |
 | borderWidth | 4 | `--border-width-*` | `--border-width-default`(1.5px) |
-| elevation (drop) | 3 | `--shadow-*` | `--shadow-md` |
+| elevation | 5 | `--shadow-*` | `--shadow-md`（dropShadow 3 + glass composite 2。CSS変数化は drop の3件） |
+
+> 解決済みフラットトークン総数: **274**（`tokens/design-tokens.json`）。件数は `node -e "Object.keys(require('./tokens/tokens.json').color.primitive).length"` 等で再計数可能。
+> 値は Figma variable と一致確認済み（例 `Brand/Primary`=#f1890e、`Space/base`=16、`JP/button-xl/font-size`=20、`Radius/full`=9999）。
 
 - 色は **primitive → semantic** の2層。コンポーネントは原則 **semantic** を参照する（primitive 直参照は gradient 等の例外のみ）。
 - `glass.*` / `composite` 影は CSS 単一プロパティに収まらないため tokens.json に定義のみ保持（必要時に各コンポーネントで合成）。
@@ -73,6 +76,7 @@
 | BottomNavItem | `2818:36` | scaffold |
 | BottomNavigation | `2819:253` | scaffold |
 | Accordion | `2427:12` | scaffold |
+| Accordions（Accordion 群コンテナ） | `2495:259` | scaffold |
 | List Row | `1040:83` | scaffold |
 | List | `1788:176` | scaffold |
 | History Row | `2776:1322` | scaffold |
@@ -100,6 +104,17 @@
 | Slot / Slot Icon | `2671:30` / `2670:15` | scaffold |
 
 > ⚠️ 命名衝突: `283:1452` の `Button`（page `Basic`）は **ロゴ切替**であり本 Button ではない。実 Button は `973:521`。
+
+### 意図的に除外したノード（UI部品ではない／不使用）
+`figma-node-map.md` には載るが、本カタログの実装対象からは外している:
+| node | 名前 | 除外理由 |
+|---|---|---|
+| `1500:6281` | StickyActionBar | node-map で「不使用」明記。実装しない。 |
+| `284:157` | Changelog | Thumbnail ページのドキュメント用テンプレ symbol（UI部品ではない）。 |
+| `284:161` | Description | 同上（ドキュメントテンプレ）。 |
+| `284:163` | Header | 同上（ドキュメントテンプレ。pattern の `header 1719:234` とは別物）。 |
+
+> 注: `PlayButton`（`87a5066…`, 2026-06-25 更新）は node-map より新しく node-map 未収載だが、本カタログには Button family に収録済み。
 
 ## 3. 生成ループ（scaffold → built の手順）
 1. **検索**: `search_design_system` / 接続ライブラリで対象コンポーネントを特定（着手前必須）。
