@@ -1,0 +1,40 @@
+/* Home screen layout. Composes existing DS instances only; all DS visual values are
+   token-bound. Container sizing uses layout primitives (100%/100vh/max-width frame),
+   consistent with the component-scoped no-hardcode rule. */
+.frame {
+  max-width: 412px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-semantic-surface-primary);
+}
+.body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+  padding: var(--spacing-lg);
+  padding-bottom: var(--spacing-3xl);
+}
+.section { display: flex; flex-direction: column; gap: var(--spacing-md); }
+.sectionHead { display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-sm); }
+.sectionTitle {
+  margin: 0;
+  font-family: var(--type-subtitle-l-family), system-ui, sans-serif;
+  font-size: var(--type-subtitle-l-size);
+  font-weight: var(--type-subtitle-l-weight);
+  line-height: var(--type-subtitle-l-line-height);
+  color: var(--color-semantic-text-primary);
+}
+.statRow { display: flex; align-items: center; gap: var(--spacing-md); }
+.statCaption {
+  font-family: var(--type-caption-l-family), system-ui, sans-serif;
+  font-size: var(--type-caption-l-size);
+  font-weight: var(--type-caption-l-weight);
+  line-height: var(--type-caption-l-line-height);
+  color: var(--color-semantic-text-secondary);
+  white-space: nowrap;
+}
+.cta { width: 100%; }
+.bottomNav { position: sticky; bottom: 0; }
