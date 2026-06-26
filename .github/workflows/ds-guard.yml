@@ -1,0 +1,30 @@
+name: ds-guard
+
+# Enforces the harness on every push/PR:
+#  - tokens.css must be regenerable from tokens.json (no drift / no hand-edits)
+#  - no hardcoded hex/px/rgb in component source
+#  - TypeScript + Vite build passes
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Regenerate tokens and fail on drift
+        run: |
+          npm run tokens
+          git diff --exit-code -- src/styles/tokens.css tokens/design-tokens.json \
+            || (echo "::error::tokens.css/design-tokens.json out of sync — run 'npm run tokens' and commit" && exit 1)
+      - name: Validate (structure + no hardcoded values)
+        run: npm run validate
+      - name: Build
+        run: npm run build
