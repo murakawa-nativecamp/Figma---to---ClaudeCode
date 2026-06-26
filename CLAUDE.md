@@ -72,8 +72,8 @@ figma-ds-harness/            強制スキル＋再現コマンドの Claude Code
 clone して `.claude/settings.json` を trust すると導入が促される。手動なら:
 `/plugin marketplace add .` → `/plugin install figma-ds-harness@nc-figma-ds`（詳細 [`figma-ds-harness/README.md`](figma-ds-harness/README.md)）。
 
-- スキル: **figma-preflight**（着手前チェック）/ **component-conventions**（生成規約）/ **token-binding-verify**（束縛+検証）/ **reference-to-brief**（参照→ブリーフ）。
-- コマンド: `/figma-ds-harness:reproduce-screen` / `:ds-preflight` / `:verify-tokens` / `:ds-rules`。
-- スキルはプロジェクト非依存。本 `CLAUDE.md` が具体（file key `DKl4vZ6OAtXYhuvMHbWkRZ`・`docs/catalog.md`・`npm run validate`・preview 5191）を供給する。
+- 共有スキル: **preflight**（起動時並列チェック＋Token Map/Component Registry ロード）/ **component-rules**（ライブラリ検索必須・既存インスタンス優先・新規生成禁止）/ **token-binding-verify**（全視覚値束縛＋書込み後自動検証）/ **reference-interpreter**（参照/ブリーフ→構造化ブリーフ）。
+- コマンド（入口2つ）: `/figma-ds-harness:reproduce`（A: Figmaフレーム→React 再現）/ `/figma-ds-harness:new-screen`（B1: ブリーフ→Figma 新規生成・DS準拠）。
+- スキルはプロジェクト非依存。本 `CLAUDE.md` が具体を供給する → Token Map=`tokens/design-tokens.json`、Component Registry=`docs/catalog.md`、file key `DKl4vZ6OAtXYhuvMHbWkRZ`、検証=`npm run validate`、preview=5191。
 
 > 前提: 公式 Figma Dev Mode MCP が有効であること（プラグインは MCP を同梱しない）。困ったら `docs/catalog.md` の「生成ループ」に戻ること。

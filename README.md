@@ -23,8 +23,8 @@ npm run dev        # プレビュー http://localhost:5191/
 4. **再現ループ**: 検索 → インスタンス利用 → トークン束縛 → スクショ検証。
 
 ## プラグイン（`figma-ds-harness`）
-強制スキル（`figma-preflight` / `component-conventions` / `token-binding-verify` / `reference-to-brief`）と
-再現コマンド（`/figma-ds-harness:reproduce-screen` ほか）は Claude Code プラグインとして同梱。
+共有強制スキル（`preflight` / `component-rules` / `token-binding-verify` / `reference-interpreter`）と
+入口2コマンド（`/figma-ds-harness:reproduce` = Figma→React 再現、`/figma-ds-harness:new-screen` = ブリーフ→Figma 新規生成）を Claude Code プラグインとして同梱。
 clone → `.claude/settings.json` を trust で導入が促される。手動: `/plugin marketplace add .` →
 `/plugin install figma-ds-harness@nc-figma-ds`。詳細は [`figma-ds-harness/README.md`](figma-ds-harness/README.md)。
 前提: 公式 Figma Dev Mode MCP が有効であること（プラグインは MCP 非同梱）。
