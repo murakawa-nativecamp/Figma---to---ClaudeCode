@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "nc-figma-ds": {
+      "source": {
+        "source": "github",
+        "repo": "murakawa-nativecamp/Figma---to---ClaudeCode"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "figma-ds-harness@nc-figma-ds": true
+  }
+}

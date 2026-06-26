@@ -1,0 +1,16 @@
+{
+  "name": "nc-figma-ds",
+  "owner": {
+    "name": "murakawa-nativecamp",
+    "email": "murakawa.nativecamp@gmail.com"
+  },
+  "description": "NativeCamp Figma→code reproduction harness plugins.",
+  "plugins": [
+    {
+      "name": "figma-ds-harness",
+      "source": "./figma-ds-harness",
+      "description": "Enforces using an existing Figma design system's components + tokens (no hardcoded values): preflight, component conventions, token-binding verification, reference→brief skills + reproduction slash commands.",
+      "version": "0.1.0"
+    }
+  ]
+}
