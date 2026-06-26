@@ -1,7 +1,7 @@
 {
   "name": "figma-ds-harness",
   "version": "0.1.0",
-  "description": "Figma→code reproduction harness: enforces using an existing Figma design system's components + tokens (no hardcoded values) via preflight, component conventions, token-binding verification, and reference→brief skills, plus reproduction slash commands.",
+  "description": "Figma design-system harness with two entry points — reproduce (Figma frame → pixel-faithful React) and new-screen (brief → DS-compliant Figma generation). Shared enforcement skills (preflight, component-rules, token-binding-verify, reference-interpreter) mandate library search, instance-first reuse, and full token/variable binding (no hardcoded values).",
   "author": {
     "name": "murakawa-nativecamp",
     "email": "murakawa.nativecamp@gmail.com"
