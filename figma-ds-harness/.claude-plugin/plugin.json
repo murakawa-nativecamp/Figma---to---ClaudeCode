@@ -1,0 +1,13 @@
+{
+  "name": "figma-ds-harness",
+  "version": "0.1.0",
+  "description": "Figma→code reproduction harness: enforces using an existing Figma design system's components + tokens (no hardcoded values) via preflight, component conventions, token-binding verification, and reference→brief skills, plus reproduction slash commands.",
+  "author": {
+    "name": "murakawa-nativecamp",
+    "email": "murakawa.nativecamp@gmail.com"
+  },
+  "homepage": "https://github.com/murakawa-nativecamp/Figma---to---ClaudeCode",
+  "repository": "https://github.com/murakawa-nativecamp/Figma---to---ClaudeCode",
+  "license": "MIT",
+  "keywords": ["figma", "design-system", "design-tokens", "code-connect", "ui"]
+}
