@@ -1,0 +1,103 @@
+/* New registration flow (Figma cVNEiNf9y2Ga3uORjJpMRW). Composes DS instances;
+   all DS visual values token-bound. Screen-level layout uses primitives + tokens. */
+.frame {
+  position: relative;
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-semantic-surface-primary);
+  overflow: hidden;
+}
+/* welcome dark→brand glow approximation (no exact DS token for the radial glow) */
+.welcomeGlow {
+  background:
+    radial-gradient(120% 60% at 100% 0%, var(--color-primitive-redorange-900), transparent 60%),
+    radial-gradient(120% 60% at 0% 100%, var(--color-primitive-orange-900), transparent 55%),
+    var(--color-semantic-surface-primary);
+}
+.body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
+  gap: var(--spacing-xl);
+}
+.topbar { display: flex; align-items: center; gap: var(--spacing-xs); padding: var(--spacing-md) 0; color: var(--color-semantic-text-primary); }
+.topbarLabel { font-size: var(--type-body-s-size); font-family: var(--type-body-s-family), system-ui, sans-serif; }
+
+/* welcome */
+.welcomeMain { flex: 1 1 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-lg); text-align: center; }
+.welcomeTitle {
+  margin: 0;
+  font-family: var(--type-heading-s-family), system-ui, sans-serif;
+  font-size: var(--type-heading-s-size);
+  font-weight: var(--type-heading-s-weight);
+  line-height: var(--type-heading-s-line-height);
+  color: var(--color-semantic-text-primary);
+}
+.trialPill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-base);
+  border-radius: var(--radius-full);
+  border: var(--border-width-default) solid var(--color-semantic-brand-primary);
+  color: var(--color-semantic-brand-primary);
+  font-family: var(--type-caption-l-family), system-ui, sans-serif;
+  font-size: var(--type-caption-l-size);
+  font-weight: var(--type-caption-l-weight);
+}
+.welcomeFooter { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-md); padding-bottom: var(--spacing-lg); }
+.cta { width: 100%; }
+
+/* segmented progress */
+.progress { display: flex; gap: var(--spacing-sm); }
+.seg { flex: 1 1 0; height: var(--spacing-xxs); border-radius: var(--radius-full); background: var(--color-semantic-divider-default); }
+.segFilled { background: var(--color-semantic-brand-primary); }
+
+/* question steps */
+.stepTitle {
+  margin: 0;
+  font-family: var(--type-heading-s-family), system-ui, sans-serif;
+  font-size: var(--type-heading-s-size);
+  font-weight: var(--type-heading-s-weight);
+  line-height: var(--type-heading-s-line-height);
+  color: var(--color-semantic-text-primary);
+}
+.options { display: flex; flex-direction: column; gap: var(--spacing-md); }
+.option { border-radius: var(--radius-lg); border: var(--border-width-default) solid transparent; cursor: pointer; background: var(--color-semantic-surface-secondary); }
+.optionSelected { border-color: var(--color-semantic-brand-primary); background: var(--color-semantic-state-selected-brand); }
+.navRow { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: var(--spacing-lg); }
+.navRowEnd { justify-content: flex-end; }
+
+/* sign up */
+.signupTitle {
+  margin: 0;
+  text-align: center;
+  font-family: var(--type-title-m-family), system-ui, sans-serif;
+  font-size: var(--type-title-m-size);
+  font-weight: var(--type-title-m-weight);
+  line-height: var(--type-title-m-line-height);
+  color: var(--color-semantic-text-primary);
+}
+.fields { display: flex; flex-direction: column; gap: var(--spacing-md); }
+.social { display: flex; flex-direction: column; gap: var(--spacing-md); }
+.iconBtn { background: none; border: 0; padding: 0; cursor: pointer; color: var(--color-semantic-text-secondary); display: inline-flex; }
+.center { display: flex; justify-content: center; }
+
+/* trial & card */
+.planBlock { background: var(--color-semantic-surface-secondary); border-radius: var(--radius-lg); padding: var(--spacing-base); display: flex; flex-direction: column; gap: var(--spacing-md); }
+.planHeader { display: flex; align-items: center; gap: var(--spacing-sm); }
+.planName { font-family: var(--type-subtitle-l-family), system-ui, sans-serif; font-size: var(--type-subtitle-l-size); font-weight: var(--type-subtitle-l-weight); color: var(--color-semantic-text-primary); flex: 1 1 auto; }
+.planRow { display: flex; align-items: baseline; justify-content: space-between; }
+.planRowKey { font-size: var(--type-body-m-size); font-family: var(--type-body-m-family), system-ui, sans-serif; color: var(--color-semantic-text-secondary); }
+.planRowVal { font-family: var(--type-subtitle-l-family), system-ui, sans-serif; font-size: var(--type-subtitle-l-size); font-weight: var(--type-subtitle-l-weight); color: var(--color-semantic-text-primary); }
+.planLine { height: var(--border-width-subtle); background: var(--color-semantic-divider-default); }
+.planNote { font-size: var(--type-caption-l-size); font-family: var(--type-caption-l-family), system-ui, sans-serif; color: var(--color-semantic-text-secondary); }
+.cardBrands { display: flex; gap: var(--spacing-xs); align-items: center; color: var(--color-semantic-text-secondary); }
+.caption { text-align: center; font-size: var(--type-caption-l-size); font-family: var(--type-caption-l-family), system-ui, sans-serif; color: var(--color-semantic-brand-primary); }
+.row2 { display: flex; gap: var(--spacing-md); }
+.row2 > * { flex: 1 1 0; min-width: 0; }
