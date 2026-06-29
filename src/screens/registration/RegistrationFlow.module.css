@@ -1,0 +1,151 @@
+/* New registration flow (Figma cVNEiNf9y2Ga3uORjJpMRW). Look-first reproduction.
+   DS visual values bound to tokens; bespoke bits (wordmark, glow, light payment
+   panel, card brands) built to match the design per "見た目最優先". */
+.frame {
+  position: relative;
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-semantic-surface-primary);
+  overflow: hidden;
+}
+/* welcome dark→warm corner glow (matches the Figma bloom; primitives used for the gradient) */
+.welcomeGlow {
+  background:
+    radial-gradient(85% 45% at 102% -2%, var(--color-primitive-redorange-600), transparent 70%),
+    radial-gradient(60% 35% at -8% 104%, var(--color-primitive-orange-700), transparent 72%),
+    var(--color-semantic-surface-primary);
+}
+.body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
+  gap: var(--spacing-xl);
+}
+.topbar { display: flex; align-items: center; gap: var(--spacing-xs); padding: var(--spacing-md) 0; color: var(--color-semantic-text-primary); }
+.topbarLabel { font-size: var(--type-body-s-size); font-family: var(--type-body-s-family), system-ui, sans-serif; }
+
+/* welcome */
+.welcomeMain { flex: 1 1 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-lg); text-align: center; }
+.wordmark {
+  font-family: var(--type-heading-s-family), system-ui, sans-serif;
+  font-size: var(--type-heading-s-size);
+  font-weight: var(--type-heading-s-weight);
+  color: var(--color-semantic-text-primary);
+  letter-spacing: -0.01em;
+}
+.wmOrange { color: var(--color-semantic-brand-primary); }
+.welcomeTitle {
+  margin: 0;
+  font-family: var(--type-heading-m-family), system-ui, sans-serif;
+  font-size: var(--type-heading-m-size);
+  font-weight: var(--type-heading-m-weight);
+  line-height: var(--type-heading-m-line-height);
+  color: var(--color-semantic-text-primary);
+}
+.trialPill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-base);
+  border-radius: var(--radius-full);
+  border: var(--border-width-default) solid var(--color-semantic-brand-primary);
+  color: var(--color-semantic-brand-primary);
+  font-family: var(--type-caption-l-family), system-ui, sans-serif;
+  font-size: var(--type-caption-l-size);
+  font-weight: var(--type-caption-l-weight);
+}
+.welcomeFooter { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-md); padding-bottom: var(--spacing-lg); }
+.cta { width: 100%; }
+
+/* segmented progress */
+.progress { display: flex; gap: var(--spacing-sm); }
+.seg { flex: 1 1 0; height: var(--spacing-xxs); border-radius: var(--radius-full); background: var(--color-semantic-divider-default); }
+.segFilled { background: var(--color-semantic-brand-primary); }
+
+/* question steps */
+.stepTitle {
+  margin: 0;
+  font-family: var(--type-heading-s-family), system-ui, sans-serif;
+  font-size: var(--type-heading-s-size);
+  font-weight: var(--type-heading-s-weight);
+  line-height: var(--type-heading-s-line-height);
+  color: var(--color-semantic-text-primary);
+}
+.options { display: flex; flex-direction: column; gap: var(--spacing-md); }
+.option { border-radius: var(--radius-lg); border: var(--border-width-default) solid transparent; cursor: pointer; background: var(--color-semantic-surface-secondary); }
+.optionSelected { border-color: var(--color-semantic-brand-primary); background: var(--color-semantic-state-selected-brand); }
+.navRow { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: var(--spacing-lg); }
+.navRowEnd { justify-content: flex-end; }
+
+/* sign up */
+.signupTitle {
+  margin: 0;
+  text-align: center;
+  font-family: var(--type-title-m-family), system-ui, sans-serif;
+  font-size: var(--type-title-m-size);
+  font-weight: var(--type-title-m-weight);
+  line-height: var(--type-title-m-line-height);
+  color: var(--color-semantic-text-primary);
+}
+.fields { display: flex; flex-direction: column; gap: var(--spacing-md); }
+.social { display: flex; flex-direction: column; gap: var(--spacing-md); }
+.iconBtn { background: none; border: 0; padding: 0; cursor: pointer; color: var(--color-semantic-text-secondary); display: inline-flex; }
+.center { display: flex; justify-content: center; }
+
+/* trial & card — plan block */
+.finalTitle {
+  margin: 0;
+  font-family: var(--type-title-l-family), system-ui, sans-serif;
+  font-size: var(--type-title-l-size);
+  font-weight: var(--type-title-l-weight);
+  color: var(--color-semantic-text-primary);
+}
+.planBlock { background: var(--color-semantic-surface-secondary); border-radius: var(--radius-lg); overflow: hidden; }
+.planHeader { display: flex; align-items: center; gap: var(--spacing-sm); padding: var(--spacing-md) var(--spacing-base); background: var(--color-semantic-state-selected-brand); }
+.planIcon { color: var(--color-semantic-brand-primary); display: inline-flex; font-size: var(--icon-size-l); }
+.planName { font-family: var(--type-subtitle-l-family), system-ui, sans-serif; font-size: var(--type-subtitle-l-size); font-weight: var(--type-subtitle-l-weight); color: var(--color-semantic-text-primary); flex: 1 1 auto; }
+.trialBadge {
+  display: inline-flex; align-items: center;
+  padding: var(--spacing-xxs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  background: var(--color-semantic-brand-primary);
+  color: var(--color-semantic-text-onbrand);
+  font-family: var(--type-caption-m-family), system-ui, sans-serif;
+  font-size: var(--type-caption-m-size);
+  font-weight: var(--type-caption-m-weight);
+}
+.planBody { display: flex; flex-direction: column; gap: var(--spacing-sm); padding: var(--spacing-base); }
+.planRow { display: flex; align-items: baseline; justify-content: space-between; }
+.planRowKey { font-size: var(--type-body-m-size); font-family: var(--type-body-m-family), system-ui, sans-serif; color: var(--color-semantic-text-secondary); }
+.planRowVal { font-family: var(--type-subtitle-l-family), system-ui, sans-serif; font-size: var(--type-subtitle-l-size); font-weight: var(--type-subtitle-l-weight); color: var(--color-semantic-text-primary); }
+.planLine { height: var(--border-width-subtle); background: var(--color-semantic-divider-default); }
+.planNote { font-size: var(--type-caption-l-size); font-family: var(--type-caption-l-family), system-ui, sans-serif; color: var(--color-semantic-text-secondary); }
+
+/* light "Select Card" panel (Figma shows a light payment sheet on the dark screen) */
+.cardPanel { background: var(--color-base-white); border-radius: var(--radius-lg); padding: var(--spacing-base); display: flex; flex-direction: column; gap: var(--spacing-md); }
+.cardPanelTitle { font-family: var(--type-subtitle-l-family), system-ui, sans-serif; font-size: var(--type-subtitle-l-size); font-weight: var(--type-subtitle-l-weight); color: var(--color-primitive-gray-900); }
+.brandRow { display: flex; gap: var(--spacing-xs); align-items: center; flex-wrap: wrap; }
+.brand { height: var(--icon-size-l); display: inline-flex; align-items: center; gap: var(--spacing-xxs); padding: 0 var(--spacing-xs); border-radius: var(--radius-sm); border: var(--border-width-subtle) solid var(--color-primitive-gray-100); background: var(--color-base-white); color: var(--color-primitive-gray-900); font-family: var(--type-subtitle-m-family), system-ui, sans-serif; font-size: var(--type-caption-l-size); font-weight: var(--type-subtitle-m-weight); }
+.lightField { display: flex; flex-direction: column; gap: var(--spacing-xxs); }
+.lightLabel { font-family: var(--type-caption-l-family), system-ui, sans-serif; font-size: var(--type-caption-l-size); font-weight: var(--type-caption-l-weight); color: var(--color-primitive-gray-600); }
+.lightInput {
+  box-sizing: border-box; width: 100%;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: var(--border-width-subtle) solid var(--color-primitive-gray-200);
+  background: var(--color-base-white);
+  color: var(--color-primitive-gray-900);
+  font-family: var(--type-body-m-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-size);
+  outline: none;
+}
+.lightInput::placeholder { color: var(--color-primitive-gray-300); }
+.lightInput:focus { border-color: var(--color-semantic-brand-primary); }
+.row2 { display: flex; gap: var(--spacing-md); }
+.row2 > * { flex: 1 1 0; min-width: 0; }
+.caption { text-align: center; font-size: var(--type-caption-l-size); font-family: var(--type-caption-l-family), system-ui, sans-serif; color: var(--color-semantic-brand-primary); }
