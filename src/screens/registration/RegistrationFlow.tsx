@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from "react";
-import { Header, Logo, Button, TextLink, Input, Divider, ListRow, Tag } from "../../components";
+import { Header, Button, TextLink, Input, Divider, ListRow } from "../../components";
 import s from "./RegistrationFlow.module.css";
 
 /* Reproduction of the New Registration Flow (Figma cVNEiNf9y2Ga3uORjJpMRW, frames at y=-378).
@@ -22,7 +22,17 @@ const Eye = () => <I d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z M12 15a3 3 
 const EyeOff = () => <I d="M17.9 17.9A10.6 10.6 0 0112 19C5 19 1 12 1 12a18 18 0 015.1-5.9M9.9 4.2A10.6 10.6 0 0112 4c7 0 11 7 11 7a18 18 0 01-2.2 3.2M1 1l22 22" />;
 const Apple = () => <svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 13c0-2 1.6-3 1.7-3-1-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.4.7-3 .7s-1.6-.7-2.6-.7c-1.3 0-2.6.8-3.2 2-1.4 2.4-.4 6 1 8 .6 1 1.4 2.1 2.4 2 1-.04 1.3-.6 2.5-.6s1.5.6 2.6.6c1 0 1.7-1 2.3-2 .5-.7.7-1.4.7-1.4s-1.5-.6-1.5-2.4zM14.5 6.2c.5-.7.9-1.6.8-2.5-.8 0-1.7.5-2.3 1.2-.5.6-.9 1.5-.8 2.4.9 0 1.8-.5 2.3-1.1z"/></svg>;
 const Google = () => <svg width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.8 12.2c0-.7-.1-1.3-.2-2H12v3.8h5.5a4.7 4.7 0 01-2 3.1v2.6h3.3c1.9-1.8 3-4.4 3-7.5z"/><path d="M12 22c2.7 0 5-.9 6.6-2.4l-3.3-2.6c-.9.6-2 1-3.3 1-2.6 0-4.7-1.7-5.5-4.1H3.1v2.6A10 10 0 0012 22z"/><path d="M6.5 13.9a6 6 0 010-3.8V7.5H3.1a10 10 0 000 9z"/><path d="M12 6.1c1.5 0 2.8.5 3.8 1.5l2.9-2.9A10 10 0 003.1 7.5l3.4 2.6C7.3 7.8 9.4 6.1 12 6.1z"/></svg>;
-const Card = () => <I d="M2 6h20v12H2zM2 10h20" />;
+const Crown = () => <I d="M3 8l4 3 5-6 5 6 4-3-2 11H5z" fill />;
+/* card-brand marks (look-first; brand colors via tokens) */
+const Visa = () => <span style={{ color: "var(--color-primitive-blue-700)", fontStyle: "italic", fontWeight: 800 }}>VISA</span>;
+const Mastercard = () => (
+  <svg width="26" height="16" viewBox="0 0 36 24" aria-hidden="true">
+    <circle cx="14" cy="12" r="9" fill="var(--color-primitive-red-500)" />
+    <circle cx="22" cy="12" r="9" fill="var(--color-primitive-orange-500)" fillOpacity="0.85" />
+  </svg>
+);
+const Jcb = () => <span style={{ fontWeight: 800 }}>JCB</span>;
+const Amex = () => <span style={{ color: "var(--color-primitive-blue-600)", fontWeight: 800 }}>AMEX</span>;
 
 const isEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 
@@ -88,7 +98,7 @@ export function RegistrationFlow() {
             <span className={s.topbarLabel}>Translate</span>
           </div>
           <div className={s.welcomeMain}>
-            <Logo state="textActive" />
+            <span className={s.wordmark}><span className={s.wmOrange}>Native</span>Camp.</span>
             <h1 className={s.welcomeTitle}>Learn Japanese with unlimited lessons</h1>
             <span className={s.trialPill}>7-day free trial · $0.00</span>
           </div>
@@ -166,24 +176,45 @@ export function RegistrationFlow() {
     <div className={s.frame}>
       <Header pageTitle="Free Trial" />
       <div className={s.body}>
-        <h1 className={s.signupTitle}>This is the final step!</h1>
+        <h1 className={s.finalTitle}>This is the final step!</h1>
         <div className={s.planBlock}>
           <div className={s.planHeader}>
+            <span className={s.planIcon}><Crown /></span>
             <span className={s.planName}>Premium Plan</span>
-            <Tag color="warning" label="7-day free trial" />
+            <span className={s.trialBadge}>7-day free trial</span>
           </div>
-          <div className={s.planRow}><span className={s.planRowKey}>today</span><span className={s.planRowVal}>$0.00</span></div>
-          <div className={s.planRow}><span className={s.planRowKey}>From Day 7</span><span className={s.planRowVal}>$99.00 / month</span></div>
-          <div className={s.planLine} />
-          <span className={s.planNote}>Cancel anytime during the free trial — you won't be charged.</span>
+          <div className={s.planBody}>
+            <div className={s.planRow}><span className={s.planRowKey}>today</span><span className={s.planRowVal}>$0.00</span></div>
+            <div className={s.planRow}><span className={s.planRowKey}>From Day 7</span><span className={s.planRowVal}>$99.00 / month</span></div>
+            <div className={s.planLine} />
+            <span className={s.planNote}>Cancel anytime during the free trial — you won't be charged.</span>
+          </div>
         </div>
-        <div className={s.fields}>
-          <div className={s.cardBrands}><Card /><Card /><Card /></div>
-          <Input label helper={false} labelText="Card number" placeholder="1234 5678 9012 3456" inputMode="numeric" />
-          <Input label helper={false} labelText="Cardholder's name" placeholder="TARO YAMADA" />
+        <div className={s.cardPanel}>
+          <span className={s.cardPanelTitle}>Select Card</span>
+          <div className={s.brandRow}>
+            <span className={s.brand}><Visa /></span>
+            <span className={s.brand}><Mastercard /></span>
+            <span className={s.brand}><Jcb /></span>
+            <span className={s.brand}><Amex /></span>
+          </div>
+          <div className={s.lightField}>
+            <label className={s.lightLabel}>Card number</label>
+            <input className={s.lightInput} placeholder="1234 5678 9012 3456" inputMode="numeric" />
+          </div>
+          <div className={s.lightField}>
+            <label className={s.lightLabel}>Cardholder's name</label>
+            <input className={s.lightInput} placeholder="TARO YAMADA" />
+          </div>
           <div className={s.row2}>
-            <Input label helper={false} labelText="Expiry date" placeholder="MM / YY" />
-            <Input label helper={false} labelText="Security code" placeholder="CVC" inputMode="numeric" />
+            <div className={s.lightField}>
+              <label className={s.lightLabel}>Expiry date</label>
+              <input className={s.lightInput} placeholder="MM / YY" inputMode="numeric" />
+            </div>
+            <div className={s.lightField}>
+              <label className={s.lightLabel}>Security code</label>
+              <input className={s.lightInput} placeholder="CVC" inputMode="numeric" />
+            </div>
           </div>
         </div>
         <span className={s.caption}>You won't be charged unless you continue after the 7-day trial.</span>
