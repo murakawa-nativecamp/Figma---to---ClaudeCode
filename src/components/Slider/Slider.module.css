@@ -1,0 +1,43 @@
+/* Slider — token-bound. Contract: slider.md · Figma 2294:6.
+   Track height / knob size have no exact token; closest used (see report). */
+
+.slider {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  height: var(--icon-size-l);
+}
+
+.track {
+  position: relative;
+  width: 100%;
+  /* track thickness ~4 → spacing.xxs */
+  height: var(--spacing-xxs);
+  border-radius: var(--radius-full);
+  background: var(--color-semantic-surface-tertiary);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--color-semantic-brand-primary);
+}
+
+.knob {
+  position: absolute;
+  top: 50%;
+  /* knob ~24 → icon-size-l */
+  width: var(--icon-size-l);
+  height: var(--icon-size-l);
+  transform: translate(-50%, -50%);
+  border-radius: var(--radius-full);
+  background: var(--color-base-white);
+  border: var(--border-width-default) solid var(--color-semantic-border-default);
+}
+
+/* ---- state ---- */
+.disabled { cursor: not-allowed; }
+.disabled .fill { background: var(--color-semantic-state-disabled-content); }
+.disabled .knob { background: var(--color-semantic-state-disabled-fill); }

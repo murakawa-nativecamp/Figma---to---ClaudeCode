@@ -1,0 +1,59 @@
+/* Banner — persistent message strip. Tokens only. Contract: banner.md · node 2457:18. */
+
+.banner {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border-left: var(--border-width-strong) solid currentColor;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size-m);
+  height: var(--icon-size-m);
+  flex-shrink: 0;
+}
+
+.text {
+  flex: 1;
+  font-family: var(--type-body-m-strong-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-strong-size);
+  font-weight: var(--type-body-m-strong-weight);
+  line-height: var(--type-body-m-strong-line-height);
+  color: var(--color-semantic-text-primary);
+}
+
+.close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size-m);
+  height: var(--icon-size-m);
+  flex-shrink: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--color-semantic-text-secondary);
+}
+
+/* accent (currentColor for the left border + icon) + background per color */
+.success {
+  color: var(--color-semantic-status-success-default);
+  background: var(--color-semantic-status-success-background);
+}
+.error {
+  color: var(--color-semantic-status-error-default);
+  background: var(--color-semantic-status-error-background);
+}
+.warning {
+  color: var(--color-semantic-status-warning-default);
+  background: var(--color-semantic-status-warning-background);
+}
+.info {
+  color: var(--color-semantic-brand-primary);
+  background: var(--color-semantic-surface-tertiary);
+}

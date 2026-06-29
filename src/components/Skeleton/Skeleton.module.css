@@ -1,0 +1,55 @@
+/* Skeleton — loading placeholder. Token-bound only. Figma 2297:15.
+   Shimmer/pulse animation is applied by the implementation (caller). */
+.block,
+.line,
+.lineShort,
+.thumb {
+  background: var(--color-semantic-surface-tertiary);
+  border-radius: var(--radius-sm);
+}
+
+/* text: stacked text-line blocks */
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+.line {
+  width: 100%;
+  height: var(--spacing-md);
+  background: var(--color-semantic-surface-tertiary);
+  border-radius: var(--radius-sm);
+}
+.lineShort {
+  width: 60%;
+  height: var(--spacing-md);
+  background: var(--color-semantic-surface-tertiary);
+  border-radius: var(--radius-sm);
+}
+
+/* listItem: thumbnail + text lines */
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+.thumb {
+  flex: none;
+  width: var(--icon-size-2xl);
+  height: var(--icon-size-2xl);
+  border-radius: var(--radius-sm);
+}
+.lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* thumbnail: single rectangle */
+.thumbnail {
+  width: 100%;
+  height: var(--icon-size-5xl);
+  background: var(--color-semantic-surface-tertiary);
+  border-radius: var(--radius-sm);
+}

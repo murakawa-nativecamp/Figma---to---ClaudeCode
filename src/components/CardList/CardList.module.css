@@ -1,0 +1,14 @@
+/* CardList — grouped surface of CardRow. Tokens only. Contract: card-list.md · node 2530:215. */
+
+.list {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-semantic-surface-elevated);
+  border: var(--border-width-default) solid var(--color-semantic-border-default);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.list > * + * {
+  border-top: var(--border-width-subtle) solid var(--color-semantic-divider-default);
+}

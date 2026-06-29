@@ -1,0 +1,19 @@
+/* TabBar — token-bound only. Contract: tabs.md · Figma 2116:68. */
+.bar {
+  display: inline-flex;
+  align-items: stretch;
+}
+
+/* underline tabs sit on a shared bottom divider */
+.underline {
+  gap: var(--spacing-md);
+  border-bottom: var(--border-width-subtle) solid var(--color-semantic-divider-default);
+}
+
+/* segmented tabs sit inside a bordered, rounded container */
+.segmented {
+  gap: var(--spacing-xxs);
+  padding: var(--spacing-xxs);
+  border: var(--border-width-default) solid var(--color-semantic-border-default);
+  border-radius: var(--radius-md);
+}

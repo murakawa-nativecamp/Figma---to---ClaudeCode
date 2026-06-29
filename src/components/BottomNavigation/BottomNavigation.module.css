@@ -1,0 +1,14 @@
+/* BottomNavigation — token-bound only. Contract: bottom-navigation.md · Figma 2819:253. */
+.bar {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  width: 100%;
+  background: var(--color-semantic-surface-primary);
+  border-top: var(--border-width-subtle) solid var(--color-semantic-border-default);
+  padding: var(--spacing-xxs) 0;
+}
+
+.bar > * {
+  flex: 1;
+}

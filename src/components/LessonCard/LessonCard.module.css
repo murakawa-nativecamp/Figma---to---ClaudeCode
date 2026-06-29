@@ -1,0 +1,92 @@
+/* LessonCard — domain lesson card. Tokens only. Contract: lesson-card.md · node 2733:2965. */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-base);
+  background: var(--color-semantic-surface-primary);
+  border: var(--border-width-default) solid var(--color-semantic-border-default);
+  border-radius: var(--radius-xl);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+}
+
+.date {
+  font-family: var(--type-body-m-strong-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-strong-size);
+  font-weight: var(--type-body-m-strong-weight);
+  line-height: var(--type-body-m-strong-line-height);
+  color: var(--color-semantic-text-primary);
+}
+
+.menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size-l);
+  height: var(--icon-size-l);
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--color-semantic-text-secondary);
+}
+
+.teacherRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.avatar {
+  width: var(--icon-size-xl);
+  height: var(--icon-size-xl);
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  background: var(--color-semantic-surface-tertiary);
+}
+
+.teacher {
+  font-family: var(--type-body-s-family), system-ui, sans-serif;
+  font-size: var(--type-body-s-size);
+  font-weight: var(--type-body-s-weight);
+  line-height: var(--type-body-s-line-height);
+  color: var(--color-semantic-text-secondary);
+}
+
+.material {
+  font-family: var(--type-body-s-family), system-ui, sans-serif;
+  font-size: var(--type-body-s-size);
+  color: var(--color-semantic-text-primary);
+}
+
+.notes {
+  font-family: var(--type-caption-m-family), system-ui, sans-serif;
+  font-size: var(--type-caption-m-size);
+  font-weight: var(--type-caption-m-weight);
+  line-height: var(--type-caption-m-line-height);
+  color: var(--color-semantic-text-secondary);
+}
+
+.action {
+  display: flex;
+}
+
+.button {
+  flex: 1;
+  height: var(--control-height-l);
+  border: 0;
+  cursor: pointer;
+  border-radius: var(--radius-full);
+  background: var(--color-semantic-brand-primary);
+  color: var(--color-semantic-text-onbrand);
+  font-family: var(--type-button-l-family), system-ui, sans-serif;
+  font-size: var(--type-button-l-size);
+  font-weight: var(--type-button-l-weight);
+  line-height: var(--type-button-l-line-height);
+}

@@ -1,0 +1,16 @@
+/* Logo (BrandMark) — symbol/text × active/inactive. Tokens only. Contract: logo.md · node 283:1452. */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--type-title-m-family), system-ui, sans-serif;
+  font-weight: var(--type-title-m-weight);
+  line-height: var(--type-title-m-line-height);
+}
+
+.symbol { font-size: var(--type-title-m-size); }
+.text { font-size: var(--type-title-s-size); }
+
+/* active = brand orange; inactive = disabled content */
+.active { color: var(--color-semantic-brand-primary); }
+.inactive { color: var(--color-semantic-state-disabled-content); }

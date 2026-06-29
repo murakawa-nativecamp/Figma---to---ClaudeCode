@@ -1,0 +1,29 @@
+/* CardAction — label + icon action. Tokens only. Contract: card-action.md · node 2731:240. */
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-md);
+  cursor: pointer;
+  background: transparent;
+  border: var(--border-width-strong) solid var(--color-semantic-border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--color-semantic-text-primary);
+}
+
+.label {
+  font-family: var(--type-button-s-family), system-ui, sans-serif;
+  font-size: var(--type-button-s-size);
+  font-weight: var(--type-button-s-weight);
+  line-height: var(--type-button-s-line-height);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size-l);
+  height: var(--icon-size-l);
+}

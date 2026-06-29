@@ -1,0 +1,50 @@
+/* Tab — token-bound only. Contract: tabs.md · Figma 2106:650. */
+.tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: var(--spacing-sm) var(--spacing-md);
+  gap: var(--spacing-sm);
+  font-family: var(--type-body-m-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-size);
+  line-height: var(--type-body-m-line-height);
+}
+
+/* inactive typography = body-m, active = body-m-strong */
+.active {
+  color: var(--color-semantic-text-primary);
+  font-weight: var(--type-body-m-strong-weight);
+}
+.inactive {
+  color: var(--color-semantic-text-secondary);
+  font-weight: var(--type-body-m-weight);
+}
+.disabled {
+  color: var(--color-semantic-state-disabled-content);
+  cursor: not-allowed;
+}
+
+/* ---- underline: bottom border on active ---- */
+.underline {
+  border-bottom: var(--border-width-strong) solid transparent;
+}
+.underline.active {
+  border-bottom-color: var(--color-semantic-brand-primary);
+}
+
+/* ---- segmented: rounded segment, fill on active ---- */
+.segmented {
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm-plus) var(--spacing-md);
+}
+.segmented.active {
+  background: var(--color-semantic-brand-primary);
+  color: var(--color-semantic-text-onbrand);
+}
+.segmented.disabled {
+  background: var(--color-semantic-state-disabled-fill);
+}

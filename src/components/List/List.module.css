@@ -1,0 +1,12 @@
+/* List — token-bound only. Contract: list.md · Figma 1788:176. */
+.list {
+  display: flex;
+  flex-direction: column;
+  border: var(--border-width-subtle) solid var(--color-semantic-border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.item + .item {
+  border-top: var(--border-width-subtle) solid var(--color-semantic-divider-default);
+}

@@ -1,0 +1,49 @@
+/* SearchBar — keyword search field. Tokens only. Contract: searchbar.md · node 2449:20. */
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: var(--color-semantic-surface-tertiary);
+  border-radius: var(--radius-md);
+}
+
+.searchIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size-l);
+  height: var(--icon-size-l);
+  flex-shrink: 0;
+  color: var(--color-semantic-text-secondary);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  outline: none;
+  color: var(--color-semantic-text-primary);
+  font-family: var(--type-body-m-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-size);
+  font-weight: var(--type-body-m-weight);
+  line-height: var(--type-body-m-line-height);
+}
+.input::placeholder {
+  color: var(--color-semantic-text-secondary);
+}
+
+.clear {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size-s);
+  height: var(--icon-size-s);
+  flex-shrink: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--color-semantic-text-secondary);
+}

@@ -1,0 +1,95 @@
+/* Dialog — center confirmation. Tokens only. Contract: dialog.md · node 2337:50. */
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  width: 100%;
+  max-width: 20rem;
+  padding: var(--spacing-xl);
+  background: var(--color-semantic-surface-elevated);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-md);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-size-xl);
+  height: var(--icon-size-xl);
+  color: var(--color-semantic-text-primary);
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--type-title-s-family), system-ui, sans-serif;
+  font-size: var(--type-title-s-size);
+  font-weight: var(--type-title-s-weight);
+  line-height: var(--type-title-s-line-height);
+  color: var(--color-semantic-text-primary);
+}
+
+.body {
+  margin: 0;
+  font-family: var(--type-body-m-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-size);
+  font-weight: var(--type-body-m-weight);
+  line-height: var(--type-body-m-line-height);
+  color: var(--color-semantic-text-secondary);
+}
+
+.input {
+  height: var(--control-height-l);
+  padding: 0 var(--spacing-md);
+  background: var(--color-semantic-surface-tertiary);
+  border: var(--border-width-default) solid var(--color-semantic-border-default);
+  border-radius: var(--radius-md);
+  color: var(--color-semantic-text-primary);
+  font-family: var(--type-body-m-family), system-ui, sans-serif;
+  font-size: var(--type-body-m-size);
+}
+
+.notes {
+  font-family: var(--type-body-s-family), system-ui, sans-serif;
+  font-size: var(--type-body-s-size);
+  line-height: var(--type-body-s-line-height);
+  color: var(--color-semantic-text-tertiary);
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.btn {
+  flex: 1;
+  height: var(--control-height-l);
+  border: 0;
+  cursor: pointer;
+  border-radius: var(--radius-full);
+  font-family: var(--type-button-l-family), system-ui, sans-serif;
+  font-size: var(--type-button-l-size);
+  font-weight: var(--type-button-l-weight);
+  line-height: var(--type-button-l-line-height);
+}
+
+.cancel {
+  background: transparent;
+  color: var(--color-semantic-text-primary);
+  border: var(--border-width-default) solid var(--color-semantic-border-default);
+}
+.confirm {
+  background: var(--color-semantic-brand-primary);
+  color: var(--color-semantic-text-onbrand);
+}
+.destructive {
+  background: var(--color-semantic-status-error-default);
+  color: var(--color-semantic-text-onbrand);
+}
